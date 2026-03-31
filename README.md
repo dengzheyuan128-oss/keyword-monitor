@@ -21,7 +21,7 @@
 ### 第一步：克隆项目
 
 ```bash
-git clone https://github.com/你的用户名/keyword-monitor.git
+git clone https://github.com/dengzheyuan128-oss/keyword-monitor.git
 cd keyword-monitor
 ```
 
@@ -88,11 +88,17 @@ email: {
 
 ## 🔌 安装 Browser Bridge 扩展（需要浏览器平台必读）
 
-1. 前往 [opencli GitHub Releases](https://github.com/jackwener/opencli/releases) 下载最新的 `opencli-extension.zip`
-2. 解压后打开 Chrome，访问 `chrome://extensions`
-3. 右上角开启【开发者模式】
-4. 点击【加载已解压的扩展程序】，选择解压后的文件夹
-5. 扩展安装完成，后续会自动连接
+运行自动下载脚本：
+```bash
+bash install-extension.sh
+```
+
+脚本会自动下载最新扩展并告诉你文件位置，然后按提示在 Chrome 里手动加载（Chrome 安全限制，这一步无法自动完成）：
+
+1. 打开 Chrome，地址栏输入 `chrome://extensions`，回车
+2. 右上角开启【开发者模式】
+3. 点击【加载已解压的扩展程序】，选择脚本提示的文件夹路径
+4. 扩展出现在列表中即安装成功
 
 验证连接：
 ```bash
@@ -163,10 +169,11 @@ tail -f monitor.log
 
 ```
 keyword-monitor/
-├── config.js        ← ⭐ 只需要改这个文件
-├── monitor.js       ← 核心执行脚本
-├── setup.sh         ← 一键环境配置
-├── setup-cron.sh    ← 定时任务设置
+├── config.js              ← ⭐ 只需要改这个文件
+├── monitor.js             ← 核心执行脚本
+├── setup.sh               ← 一键环境配置
+├── install-extension.sh   ← 自动下载并准备 Chrome 扩展
+├── setup-cron.sh          ← 定时任务设置
 ├── package.json
 └── README.md
 ```
