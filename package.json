@@ -1,0 +1,18 @@
+{
+  "name": "keyword-monitor",
+  "version": "1.0.0",
+  "description": "基于 opencli 的关键词监控 + 邮件推送工具",
+  "main": "monitor.js",
+  "scripts": {
+    "start": "node monitor.js",
+    "setup": "bash setup.sh",
+    "cron": "bash setup-cron.sh"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}
