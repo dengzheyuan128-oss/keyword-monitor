@@ -1,7 +1,7 @@
 @echo off
 
 echo.
-echo 正在运行关键词监控...
+echo Running keyword monitor...
 echo.
 node monitor.js
 echo.
